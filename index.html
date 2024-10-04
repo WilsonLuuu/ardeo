@@ -7,11 +7,28 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="icon" type="image/x-icon" href="icon.png">
         <script src="js/global.js"></script>
+        <script src="js/home-btn.js"></script>
     </head>
     <body>
         <div id="header"></div>
         <div id="home-s1">
             <div id="title">ARDEO</div>
+            <div id="hbtn-contain">
+                <button type="button" id="hbtn">
+                    Test BMR Now
+                </button>
+                <svg width="0" height="0" style="position: absolute;">
+                    <filter id="goo" x="-50%" y="-50%" width="200%" height="200%">
+                        <feComponentTransfer>
+                        <feFuncA type="discrete" tableValues="0 1"></feFuncA>
+                        </feComponentTransfer>
+                        <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                        <feComponentTransfer>
+                        <feFuncA type="table" tableValues="-5 11"></feFuncA>
+                      </feComponentTransfer>
+                    </filter>
+                </svg>
+            </div>
             <!--waves-->
             <div>
                 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -28,6 +45,11 @@
                 </g>
                 </svg>
             </div>
+        </div>
+        <div style="height: 15vw;
+                    background: linear-gradient(rgba(108, 184, 209, 1), 
+                                                rgba(244, 244, 244, 1));"></div>
+        <div id="home-s2">
         </div>
         <div id="footer"></div>
     </body>

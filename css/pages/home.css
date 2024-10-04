@@ -7,13 +7,59 @@
 }
 #title{
     align-self: center;
-    left: 13vw;
     position: absolute;
     font-size: 8vw;
+}
+#hbtn-contain{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    height: 13vw;
+    top: 30vw;
+    position: absolute;
+    align-self: center;
+}
+#hbtn{
+    --a: 0%;
+    --hue: 185deg;
+    --button: hsl(var(--hue), 66%, 66%);
+    border: none;
+    color: hsla(var(--hue), 80%, 30%, 0.7);
+    font-size: 2vw;
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    padding: 1vw;
+    isolation: isolate;
+    background-color: transparent;
+    &:hover {
+        --a: 100%;
+    }
+}
+button:before {
+    content: "";
+    position: absolute;
+    inset: 0vw;
+    filter: blur(12px) url(#goo) drop-shadow(0 .25em .5em hsla(0deg, 0%, 0%, 0.2)); 
+    background-image:
+        linear-gradient(0deg,var(--button),var(--button)),
+        radial-gradient(
+            40% 70% at calc(var(--x) * 1%) calc(var(--y) * 1%),
+            hsla(var(--hue), 77%, 77%, var(--a)) 0%,
+            transparent 100%
+        );
+    background-clip: content-box, border-box;
+    padding: 1.5vw;
+    z-index: -1;
+    border: inherit;
 }
 .waves {
   width: 100vw;
   margin-top: 36vw;
+}
+#home-s2{
+    height: 60vw;
+    background-color: rgb(244, 244, 244);
 }
 /* Animation */
 .parallax > use {
