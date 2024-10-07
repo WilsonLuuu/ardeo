@@ -11,6 +11,7 @@
     font-size: 8vw;
 }
 #hbtn-contain{
+    border: solid 20px transparent;
     width: 20vw;
     display: flex;
     justify-content: center;
@@ -23,11 +24,11 @@
     --a: 0%;
     --hue: 185deg;
     --button: hsl(var(--hue), 66%, 66%);
-    border: none;
     color: hsla(var(--hue), 80%, 30%, 0.7);
     font-size: 2vw;
     width: 20vw;
     height: 10vw;
+    border: none;
     position: absolute;
     padding: 1vw;
     isolation: isolate;
@@ -39,6 +40,7 @@
 button:before {
     content: "";
     position: absolute;
+    border: transparent;
     inset: 0vw;
     filter: blur(12px) url(#goo) drop-shadow(0 .25em .5em hsla(0deg, 0%, 0%, 0.2)); 
     background-image:
